@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="navbar-brand">
+      <%= image_tag("images_files/61s2HLYntQL._SL210_QL95_BG0,0,0,0_FMpng_.png", size: '80x80') %>
+      Calorie Tracker<br>
+      <a href="http://www.healthylivingheavylifting.com/5-reasons-you-need-to-count-calories/" class="margin-left-84">Source</a>
+    </div>
+
+
+  </nav>
+
+
+<header>
+  <h1>Entries</h1>
+    <%= image_tag("images_files/61s2HLYntQL._SL210_QL95_BG0,0,0,0_FMpng_.png") %>
+</header>
+
+<table class="centerTable">
+  <thead>
+    <tr>
+    <th scope="col"><span class="badge badge-food">Food</span></th>
+    <th scope="col"><span class="badge badge-calories">Calories</span></th>
+      <h1><th colspan="3"></th></h1>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @entries.each do |entry| %>
+      <tr>
+        <td><%= entry.food %></td>
+        <td><%= entry.calories %></td>
+        <td><%= link_to 'Show', entry %></td>
+        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
+        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% total_calories = @entries.sum do |entry|
+  entry.calories
+end %>
+
+<p class="total">
+  <b>Total: </b>
+  <%= total_calories %>
+  calories.
+</p>
+
+<p class="consume">
+  <b>You can still consume <%= 2200 - total_calories %> calories today.</b>
+</p>
+
+<br>
+
+<p class="new_entry">
+<%= link_to 'New Entry', new_entry_path %>
+</p>
+
+</body>

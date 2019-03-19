@@ -1,0 +1,62 @@
+// Place all the styles related to the entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.margin-left-84 {
+  margin-left: 84px;
+}
+
+.total {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.centerTable {
+  margin: 0px auto;
+  font-weight: bold;
+  font-size: 20px;
+  }
+
+.consume {
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 50px;
+  }
+
+ .new_entry {
+   color: black;
+   font-weight: bold;
+   font-size: 20px;
+   text-align: center;
+   padding: 0px;
+   margin-top: auto;
+  }
+
+th, td {
+    border-bottom: 1px solid #ddd;
+  }
+
+th {
+  text-align: left;
+ }
+
+thead
+.badge-food {
+  background-color: yellow;
+  color: black;
+}
+
+.badge-calories {
+ background-color: lightgreen;
+ color: black
+}
+
+.badge {
+ color: 20;
+ font-size: 20px;
+ font-weight: bold
+}
